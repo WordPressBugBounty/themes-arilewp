@@ -522,6 +522,9 @@ address i {
 .footer-sidebar .widget .wp-block-table td a {
 	color: #007BFF;
 }
+.footer-sidebar .widget dl a {
+	color: #007BFF;
+}
 
 /*--------------------------------------------------
 =>> Page Scroll Up/Down Area
