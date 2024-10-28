@@ -525,6 +525,9 @@ address i {
 .footer-sidebar .widget dl a {
 	color: #007BFF;
 }
+.footer-sidebar .wp-block-embed .wp-element-caption a {
+	color: #007BFF;
+}
 
 /*--------------------------------------------------
 =>> Page Scroll Up/Down Area
