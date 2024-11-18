@@ -139,3 +139,7 @@ li#accordion-section-upgrade_premium .accordion-section-title:hover {
 	background: -webkit-linear-gradient(to right, #233fe7, #009efa) !important;  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #233fe7, #009efa) !important;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+#customize-controls .control-section .accordion-section-title button:focus, #customize-controls .control-section .accordion-section-title button:hover, #customize-controls .control-section.open .accordion-section-title, #customize-controls .control-section:hover>.accordion-section-title {
+    color: unset;
+    background: unset;
+}

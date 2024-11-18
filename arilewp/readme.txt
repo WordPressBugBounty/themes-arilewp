@@ -2,10 +2,10 @@
 Contributors: ThemeArile
 Author: ThemeArile
 Requires at least: 4.7
-Tested up to: 6.5.3
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 3.12.0
-Version: 3.12.0
+Stable tag: 3.12.1
+Version: 3.12.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, post-formats, theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, e-commerce, portfolio
@@ -56,6 +56,9 @@ License: MIT (http://opensource.org/licenses/MIT)
 License: CC0 Public Domain
 
 == Changelog ==
+
+= Version 3.12.1
+* We have fixed the hover color issue of upgrade to pro button in the customizer.
 
 = Version 3.12.0
 * We have added the around the space of the wp-block-details widget in the footer widget area.
