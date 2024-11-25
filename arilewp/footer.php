@@ -11,7 +11,7 @@
 $arilewp_footer_widgets_enabled = get_theme_mod('arilewp_footer_widgets_enabled', true);  
 $arilewp_footer_container_size = get_theme_mod('arilewp_footer_container_size', 'container-full');
 $arilewp_footer_copright_enabled = get_theme_mod('arilewp_footer_copright_enabled', true);
-$arilewp_footer_copright_text = get_theme_mod('arilewp_footer_copright_text', __('Copyright &copy; 2023 | Powered by <a href="//wordpress.org/">WordPress</a> <span class="sep"> | </span> ArileWP theme by <a target="_blank" href="//themearile.com/">ThemeArile</a>', 'arilewp'));
+$arilewp_footer_copright_text = get_theme_mod('arilewp_footer_copright_text', __('Copyright &copy; 2024 | Powered by <a href="//wordpress.org/">WordPress</a> <span class="sep"> | </span> ArileWP theme by <a target="_blank" href="//themearile.com/">ThemeArile</a>', 'arilewp'));
 $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', true); 
 ?>
 	<!--Footer-->

@@ -144,7 +144,7 @@ function arilewp_customizer_theme_settings( $wp_customize ){
 			'arilewp_footer_copright_text',
 			array(
 				'sanitize_callback' =>  'arilewp_sanitize_text',
-				'default' => __('Copyright &copy; 2023 | Powered by <a href="//wordpress.org/">WordPress</a> <span class="sep"> | </span> ArileWP theme by <a target="_blank" href="//themearile.com/">ThemeArile</a>', 'arilewp'),
+				'default' => __('Copyright &copy; 2024 | Powered by <a href="//wordpress.org/">WordPress</a> <span class="sep"> | </span> ArileWP theme by <a target="_blank" href="//themearile.com/">ThemeArile</a>', 'arilewp'),
 				'transport'         => $selective_refresh,
 			)	
 		);
