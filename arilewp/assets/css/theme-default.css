@@ -466,6 +466,9 @@ address i {
 .theme-blog .post .entry-content ul.wp-block-page-list li.wp-block-navigation-item a:hover {
 	color: #007BFF;
 }
+.sidebar .widget .wp-block-group .wp-block-embed .wp-element-caption a {
+	color: #007BFF;
+}
 
 /*------------------------------------------------------------
 =>> Footer Sidebar Widget Style Css According to WordPress 5.8
