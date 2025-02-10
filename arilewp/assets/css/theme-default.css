@@ -469,6 +469,9 @@ address i {
 .sidebar .widget .wp-block-group .wp-block-embed .wp-element-caption a {
 	color: #007BFF;
 }
+.sidebar .widget .wp-block-group .wp-block-read-more {
+    color: #007BFF;
+}
 
 /*------------------------------------------------------------
 =>> Footer Sidebar Widget Style Css According to WordPress 5.8
