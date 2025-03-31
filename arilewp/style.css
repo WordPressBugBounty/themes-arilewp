@@ -4,7 +4,7 @@ Theme URI: https://themearile.com/arilewp-theme/
 Author: ThemeArile
 Author URI: https://themearile.com
 Description: ArileWP is a powerful, modern and professional multipurpose WordPress theme with pixel perfect design and outstanding functionality. As well as sophisticated plus it has some exotic features like customization and clean code, advanced typography, sticky menu, logo upload, header image, Bootstrap 4 framework, built with SEO in mind, and theme info area besides being Mobile ready, translation ready (WPML, Polylang) and it's built to be beautiful on all screen sizes. The theme perfectly suited for business, consultant, finance, corporate, freelancer, agency, business promotion, electrician, industries, education, SEO, construction, fashion, online shop, health & medical, Beauty & spa salons, wedding, photography, gym, cafe, music, architecture, lawyer, restaurant, hotel, blog, magazine, travel agency and many other websites compatible. This theme supports the best Elementor page builder to create, edit and updates page designs as per the requirement. ArileWP also supports popular free and premium WordPress plugins such as Elementor, Yoast SEO, WooCommerce, Contact Form 7, Jetpack, Google Analytics and much more. Check the demo of ArileWP Pro https://themearile.com/arilewp-pro-theme/.
-Version: 3.13.5
+Version: 3.13.6
 Tested up to: 6.7
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -1540,23 +1540,21 @@ body.single-post .theme-blog.theme-blog-large .post .entry-title {
 .widget:last-child { 
 	margin-bottom: 3.75rem;
 }
-.widget .widget-title { 
-	color: #fff; 
-	margin-bottom: 2.125rem; 
-	padding: 0; 
-	font-weight: 600;
-	font-size: 1.2rem;
-	letter-spacing: .1em;
-	text-transform: uppercase; 
-}
-.sidebar .widget .widget-title {
+.widget .widget-title, 
+.widget .wp-block-heading {
+	background-color: #01012f;
     color: #ffffff;
+	position: relative; 
     margin-bottom: 0;
     padding-left: 10px;
     padding: 10px 15px;
-    background-color: #01012f;
+	font-weight: 600;
+	font-size: 1.2rem;
+	letter-spacing: .1em;
+	text-transform: uppercase;
 }
-.sidebar .widget .widget-title a.rsswidget {
+.widget .widget-title a.rsswidget, 
+.widget .wp-block-heading a.rsswidget {
     color: #ffffff;	
 }
 .sidebar .widget #searchform,
@@ -1579,7 +1577,6 @@ body.single-post .theme-blog.theme-blog-large .post .entry-title {
 	margin: 1.563rem 1.000rem 1.563rem; 
 	width: 90%;
 }
-.widget .widget-title { position: relative; padding-bottom: 0.5rem; }
 .widget_archive ul, .widget_categories ul, .widget_links ul, 
 .widget_meta ul, .widget_nav_menu ul, .widget_pages ul, 
 .widget_recent_comments ul, .widget_recent_entries ul { 
@@ -1607,6 +1604,11 @@ body.single-post .theme-blog.theme-blog-large .post .entry-title {
 .widget_recent_comments li:last-child, .widget_recent_entries li:last-child {
     padding-bottom: 0px;
     border-bottom: none;
+}
+.widget_archive li a, .widget_categories li a, .widget_links li a, 
+.widget_meta li a, .widget_nav_menu li a, .widget_pages li a, 
+.widget_recent_comments li a, .widget_recent_entries li a { 
+	font-weight: 600;
 }
 /*Calendar*/
 .calendar_wrap table#wp-calendar { 
@@ -1702,6 +1704,11 @@ body.single-post .theme-blog.theme-blog-large .post .entry-title {
 .textwidget ul li a:focus {
     color: #01012f !important;
 	box-shadow: none;
+}
+/*Image Widget*/
+.sidebar .widget_media_image .wp-caption {
+	padding: 1.563rem 1.000rem 1.563rem;
+	margin-bottom: 0;
 }
 /*RSS Widget*/
 .widget_rss ul {  
@@ -2088,6 +2095,9 @@ embed, iframe, object {
 	color: #fff !important;
 }
 /*wp-block-gallery*/
+.sidebar .wp-block-gallery {
+	margin: 1.563rem 1.000rem 1.563rem;
+}
 .wp-block-gallery.alignfull {
     margin: 0 0 1.563rem;
 }
@@ -2181,7 +2191,6 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
 .footer-sidebar .widget_archive li:last-child, .footer-sidebar .widget_categories li:last-child, .footer-sidebar .widget_links li:last-child, .footer-sidebar .widget_meta li:last-child, .footer-sidebar .widget_nav_menu li:last-child, .footer-sidebar .widget_pages li:last-child, .footer-sidebar .widget_recent_comments li:last-child, .footer-sidebar .widget_recent_entries li:last-child {
     padding-bottom: 0;
 }
-
 .footer-sidebar .widget h1, .footer-sidebar .widget h2, .footer-sidebar .widget h3, 
 .footer-sidebar .widget h4, .footer-sidebar .widget h5, .footer-sidebar .widget h6 {
 	color: #fff;
@@ -2205,6 +2214,11 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
     background-color: #c0c0c0 !important;
     border-color: #c0c0c0 !important;
 }
+/*Rss Widget*/
+.footer-sidebar .widget_rss ul li {
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
 
 /*--------------------------------------------------
 =>> Theme Site Info Area
@@ -2218,17 +2232,10 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
 =>> Sidebar Widget Style Css According to WordPress 5.8
 --------------------------------------------------*/
 
-.sidebar .widget .wp-block-group h2, 
 .sidebar .widget .wp-block-search .wp-block-search__label { 
 	font-size: 1.2rem;
     letter-spacing: .1em;
 }
-.sidebar .widget .wp-block-group h1, 
-.sidebar .widget .wp-block-group h2, 
-.sidebar .widget .wp-block-group h3, 
-.sidebar .widget .wp-block-group h4, 
-.sidebar .widget .wp-block-group h5, 
-.sidebar .widget .wp-block-group h6, 
 .sidebar .widget .wp-block-search .wp-block-search__label { 
 	background-color: #01012f;
     color: #ffffff;
@@ -2267,6 +2274,11 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
 .sidebar .widget .wp-block-group .wp-block-pullquote,
 .sidebar .widget .wp-block-group .wp-block-details {
 	padding: 1.563rem 1.000rem 1.563rem;
+}
+.sidebar .widget.widget_block .wp-block-group .wp-block-details p {
+	margin-top: 1rem;
+    padding: 1rem 0 0;
+    border-top: 1px solid rgba(132, 132, 132, .17);
 }
 .sidebar .widget .wp-block-group .wp-block-quote,
 .sidebar .widget .wp-block-group .wp-block-verse,
@@ -2510,6 +2522,7 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
 }
 .sidebar .widget .wp-block-group .wp-block-list {
 	padding: 1.563rem 1.000rem 1.563rem;
+	margin-left: 1.000rem;
 }
 .sidebar .widget .wp-block-group .wp-block-read-more {
 	padding: 1.563rem 1.000rem 1.563rem;
@@ -2526,18 +2539,24 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
 .wp-block-image figcaption {
 	font-weight: bold;
 }
+.widget .wp-block-page-list, 
+.widget .wp-block-rss {
+	list-style: none;
+	margin-left: 0 !important;
+}
+.widget .wp-block-page-list ul {
+	list-style: none;
+}
 
 /*------------------------------------------------------------
 =>> Footer Sidebar Widget Style Css According to WordPress 5.8
 ------------------------------------------------------------*/
 
-.footer-sidebar .widget .wp-block-group h2 {
+.footer-sidebar .widget .widget-title, 
+.footer-sidebar .widget .wp-block-heading {
+	background-color: transparent;
 	margin-bottom: 2.125rem;
-    padding: 0;
-    font-weight: 600;
-    font-size: 1.2rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+	padding: 0;
 }
 .footer-sidebar .widget .wp-block-group .wp-block-tag-cloud a {
     background-color: #fff;

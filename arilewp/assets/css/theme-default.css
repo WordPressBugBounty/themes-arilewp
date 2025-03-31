@@ -298,7 +298,8 @@ td a {
 .widget a:focus { 
 	color: #007bff; 
 }
-.sidebar .widget .widget-title {
+.sidebar .widget .widget-title, 
+.sidebar .widget .wp-block-heading {
     border-top: 3px solid #007bff;
 }
 .widget button[type="submit"],
@@ -390,12 +391,6 @@ address i {
 =>> Sidebar Widget Style Css According to WordPress 5.8
 --------------------------------------------------*/
 
-.sidebar .widget .wp-block-group h1, 
-.sidebar .widget .wp-block-group h2, 
-.sidebar .widget .wp-block-group h3, 
-.sidebar .widget .wp-block-group h4, 
-.sidebar .widget .wp-block-group h5, 
-.sidebar .widget .wp-block-group h6, 
 .sidebar .widget .wp-block-search .wp-block-search__label { 
 	border-top: 3px solid #007bff;
 }
