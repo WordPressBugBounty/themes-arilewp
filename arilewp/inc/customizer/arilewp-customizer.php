@@ -92,6 +92,9 @@ if ( ! class_exists( 'ArileWP_Customizer' ) ) :
 	
 		public function arilewp_customizer_settings() {
 			
+			// Recommended Plugin
+			require ARILEWP_PARENT_CUSTOMIZER_DIR . '/customizer-notice/arilewp-notify-plugin.php';
+			
 			// Base class.
 			require ARILEWP_PARENT_CUSTOMIZER_DIR . '/customizer-settings/arilewp-customize-base-customizer-settings.php';
 			// general.

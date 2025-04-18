@@ -9,23 +9,21 @@
 function arilewp_add_sidebar_layout_box(){
     add_meta_box(  'arilewp_sidebar_layout', __( 'Sidebar Layout', 'arilewp' ), 'arilewp_sidebar_layout_callback', 'page', 'normal', 'high' );
 }
-add_action( 'add_meta_boxes', 'arilewp_add_sidebar_layout_box' );
+add_action( 'admin_init', 'arilewp_add_sidebar_layout_box' );
 
-$arilewp_sidebar_layout = array( 
+	
+	$arilewp_sidebar_layout = array( 
 
     'right-sidebar' => array(
          'value'     => 'right-sidebar',
-    	 'label'     => __( 'Right Sidebar', 'arilewp' ),
     	 'thumbnail' => get_template_directory_uri() . '/assets/img/theme-right-sidebar.png'         
      ),   
     'no-sidebar'     => array(
     	 'value'     => 'no-sidebar',
-    	 'label'     => __( 'Full Width', 'arilewp' ),
     	 'thumbnail' => get_template_directory_uri() . '/assets/img/theme-fullwidth.png'
    	),    
     'left-sidebar' => array(
          'value'     => 'left-sidebar',
-    	 'label'     => __( 'Left Sidebar', 'arilewp' ),
     	 'thumbnail' => get_template_directory_uri() . '/assets/img/theme-left-sidebar.png'         
     ),
   
@@ -33,6 +31,8 @@ $arilewp_sidebar_layout = array(
 
 function arilewp_sidebar_layout_callback(){
     global $post , $arilewp_sidebar_layout;
+
+
     wp_nonce_field( basename( __FILE__ ), 'arilewp_nonce' );
 ?>
  
@@ -50,7 +50,7 @@ function arilewp_sidebar_layout_callback(){
             <div class="radio-image-wrapper" style="float:left; margin-right:30px;">
                 <label class="description">
                     <span><img src="<?php echo esc_url( $field['thumbnail'] ); ?>" alt="" /></span><br/>
-                    <input type="radio" name="arilewp_sidebar_layout" value="<?php echo esc_attr( $field['value'] ); ?>" <?php checked( $field['value'], $layout ); if( empty( $layout ) ){ checked( $field['value'], 'right-sidebar' ); }?>/>&nbsp;<?php echo esc_html( $field['label'] ); ?>
+                    <input type="radio" name="arilewp_sidebar_layout" value="<?php echo esc_attr( $field['value'] ); ?>" <?php checked( $field['value'], $layout ); if( empty( $layout ) ){ checked( $field['value'], 'right-sidebar' ); }?>/>
                 </label>
             </div>
             <?php } // end foreach 
