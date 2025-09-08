@@ -467,6 +467,16 @@ address i {
 .sidebar .widget .wp-block-group .wp-block-read-more {
     color: #007BFF;
 }
+/*Woocommerce Styles*/
+.wp-block-woocommerce-cart .wp-block-woocommerce-proceed-to-checkout-block .wc-block-cart__submit-button {
+	background: #007BFF;
+	border: solid 1px #007BFF;
+}
+.wp-block-woocommerce-cart .wp-block-woocommerce-proceed-to-checkout-block .wc-block-cart__submit-button:hover, 
+.wp-block-woocommerce-cart .wp-block-woocommerce-proceed-to-checkout-block .wc-block-cart__submit-button:focus {
+	background: #007BFF;
+	border: solid 1px #007BFF;
+}
 
 /*------------------------------------------------------------
 =>> Footer Sidebar Widget Style Css According to WordPress 5.8
