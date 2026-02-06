@@ -4,8 +4,8 @@ Author: ThemeArile
 Requires at least: 4.7
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 3.14.3
-Version: 3.14.3
+Stable tag: 3.14.6
+Version: 3.14.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, post-formats, theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, e-commerce, portfolio
@@ -56,6 +56,15 @@ License: MIT (http://opensource.org/licenses/MIT)
 License: CC0 Public Domain
 
 == Changelog ==
+
+= Version 3.14.6
+* We added around the space of the accordion widget title in the sidebar widget area.
+
+= Version 3.14.5
+* We added the font-weight of the wp-block-list widget in blog post area.
+
+= Version 3.14.4
+* We have fixed the woocommerce product__title style issue in cart page.
 
 = Version 3.14.3
 * We have fixed the checkout button css issue in woocommerce.

@@ -4,7 +4,7 @@ Theme URI: https://themearile.com/arilewp-theme/
 Author: ThemeArile
 Author URI: https://themearile.com
 Description: ArileWP is a powerful, modern and professional multipurpose WordPress theme with pixel perfect design and outstanding functionality. As well as sophisticated plus it has some exotic features like customization and clean code, advanced typography, sticky menu, logo upload, header image, Bootstrap 4 framework, built with SEO in mind, and theme info area besides being Mobile ready, translation ready (WPML, Polylang) and it's built to be beautiful on all screen sizes. The theme perfectly suited for business, consultant, finance, corporate, freelancer, agency, business promotion, electrician, industries, education, SEO, construction, fashion, online shop, health & medical, Beauty & spa salons, wedding, photography, gym, cafe, music, architecture, lawyer, restaurant, hotel, blog, magazine, travel agency and many other websites compatible. This theme supports the best Elementor page builder to create, edit and updates page designs as per the requirement. ArileWP also supports popular free and premium WordPress plugins such as Elementor, Yoast SEO, WooCommerce, Contact Form 7, Jetpack, Google Analytics and much more. Check the demo of ArileWP Pro https://themearile.com/arilewp-pro-theme/.
-Version: 3.14.3
+Version: 3.14.6
 Tested up to: 6.8
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -2573,6 +2573,17 @@ ul.wp-block-rss li.wp-block-rss__item:last-child {
 .wp-block-woocommerce-cart .wp-block-woocommerce-proceed-to-checkout-block .wc-block-cart__submit-button:focus {
 	color: #fff;
 }
+.wc-block-grid .edit-post-visual-editor .editor-block-list__block .wc-block-grid__product-title, .wc-block-grid .editor-styles-wrapper .wc-block-grid__product-title, .wc-block-grid .wc-block-grid__product-title {
+    color: #01012f;
+    padding: 0 0 .3rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.03rem;
+    border: none;
+}
+.theme-blog .post .entry-content .wp-block-list li a {
+	font-weight: 600;
+}
+.sidebar .widget .wp-block-accordion-heading {padding: 1rem 0rem 1rem 1rem;}
 
 /*------------------------------------------------------------
 =>> Footer Sidebar Widget Style Css According to WordPress 5.8
