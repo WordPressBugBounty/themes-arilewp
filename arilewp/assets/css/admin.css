@@ -143,3 +143,7 @@ li#accordion-section-upgrade_premium .accordion-section-title:hover {
     color: unset;
     background: unset;
 }
+/*customizer Setting*/
+.updated.notice-get-started-class {
+	background-color: #ffffff;
+} 

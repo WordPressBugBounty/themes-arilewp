@@ -58,7 +58,7 @@ li[class|="customize-control-arilewp-"] .wp-picker-container span.color-alpha {
 }
 
 .customize-control-arilewp-radio-buttonset .buttonset .switch-input:checked + .switch-label {
-	background: #13a1dc;
+	background: #3858e9;
 	color: rgba(255, 255, 255, 0.8);
 }
 
@@ -105,7 +105,7 @@ li[class|="customize-control-arilewp-"] .wp-picker-container span.color-alpha {
 }
 
 .customize-control-arilewp-slider .ui-slider .ui-slider-range {
-	background-color: #13a1dc;
+	background-color: #3858e9;
 	height: 100%;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
@@ -188,7 +188,7 @@ li[class|="customize-control-arilewp-"] .wp-picker-container span.color-alpha {
 .customize-control-arilewp-radio-image input:checked + label img {
 	-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
-	border: 1px solid #13a1dc;
+	border: 1px solid #3858e9;
 }
 
 .customize-control-arilewp-radio-image input + label .image-clickable {
@@ -312,7 +312,7 @@ li[class|="customize-control-arilewp-"] .wp-picker-container span.color-alpha {
 }
 
 .customize-control-arilewp-toggle input:checked + .switch::after {
-	background: #13a1dc;
+	background: #3858e9;
 	-webkit-transform: translate3d(100%, -50%, 0);
 	transform: translate3d(100%, -50%, 0);
 }
@@ -331,7 +331,7 @@ li[class|="customize-control-arilewp-"] .wp-picker-container span.color-alpha {
 	margin-right: -12px;
 	padding: 7px 15px;
 	background: #FFF;
-	border-left: 4px solid #0073aa;
+	border-left: 4px solid #3858e9;
 }
 
 .customize-control-arilewp-heading h4 {
