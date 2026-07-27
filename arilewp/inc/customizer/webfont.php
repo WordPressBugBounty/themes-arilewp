@@ -34,9 +34,16 @@ function arilewp_google_fonts_array() {
 }
 
 
-function arilewp_google_fonts_url() {
+/*--------------------------------------------------------------------*/
+/*     Register Google Fonts
+/*--------------------------------------------------------------------*/
+function arilewp_default_fonts_url() {
+	
+    $fonts_url = '';
+		
+    $font_families = array();
  
-	$font_families = arilewp_google_fonts_array();
+	$font_families = array('Open Sans:400,300,300italic,400italic,600,600italic,700,700italic',   'Source Sans Pro:300,300italic,400,400italic,500,500italic,600,600italic,700,italic,800,800italic,900,900italic');
  
         $query_args = array(
             'family' => urlencode( implode( '|', $font_families ) ),
@@ -47,7 +54,52 @@ function arilewp_google_fonts_url() {
 
     return $fonts_url;
 }
-function arilewp_google_font_scripts_styles() {
-    wp_enqueue_style( 'arilewp-google-fonts', arilewp_google_fonts_url(), array(), null );
+function arilewp_default_scripts_styles() {
+    wp_enqueue_style( 'arilewp-default-fonts', arilewp_default_fonts_url(), array(), null );
 }
-add_action( 'wp_enqueue_scripts', 'arilewp_google_font_scripts_styles');
+
+if ( true == get_theme_mod( 'arilewp_typography_disabled', false ) ) {
+	add_action( 'wp_enqueue_scripts', 'arilewp_theme_fonts',1 );
+	add_action( 'enqueue_block_editor_assets', 'arilewp_theme_fonts',1 );
+	add_action( 'customize_preview_init', 'arilewp_theme_fonts', 1 );
+}else {
+	add_action( 'wp_enqueue_scripts', 'arilewp_default_scripts_styles');
+}
+
+
+function arilewp_theme_fonts() {
+    $fonts_url = arilewp_get_fonts_url();
+    // Load Fonts if necessary.
+    if ( $fonts_url ) {
+        require_once (get_theme_file_path( '/inc/customizer/wptt-webfont-loader.php' ));
+        wp_enqueue_style( 'arilewp-theme-fonts', wptt_get_webfont_url( $fonts_url ), array(), '20201110' );
+    }
+}
+/**
+ * Retrieve webfont URL to load fonts locally.
+ */
+function arilewp_get_fonts_url() {
+	$base_font               = get_theme_mod('arilewp_typography_base_font_family','Open Sans');
+	$h1_font                 = get_theme_mod('arilewp_typography_h1_font_family','Source Sans Pro');
+	$h2_font                 = get_theme_mod('arilewp_typography_h2_font_family','Source Sans Pro');
+	$h3_font                 = get_theme_mod('arilewp_typography_h3_font_family','Source Sans Pro');
+	$h4_font                 = get_theme_mod('arilewp_typography_h4_font_family','Source Sans Pro');
+	$h5_font                 = get_theme_mod('arilewp_typography_h5_font_family','Source Sans Pro');
+	$h6_font                 = get_theme_mod('arilewp_typography_h6_font_family','Source Sans Pro');
+	 
+    $font_families = array(
+	$base_font .':100', $base_font .':100italic', $base_font .':200', $base_font .':200italic', $base_font .':300', $base_font .':300italic', $base_font .':400', $base_font .':400italic', $base_font .':500', $base_font .':500italic', $base_font .':600', $base_font .':600italic', $base_font .':700', $base_font .':700italic', $base_font .':800', $base_font .':800italic', $base_font .':900', $base_font .':900italic',
+	$h1_font .':100', $h1_font .':100italic', $h1_font .':200', $h1_font .':200italic', $h1_font .':300', $h1_font .':300italic', $h1_font .':400', $h1_font .':400italic', $h1_font .':500', $h1_font .':500italic', $h1_font .':600', $h1_font .':600italic', $h1_font .':700', $h1_font .':700italic', $h1_font .':800', $h1_font .':800italic', $h1_font .':900', $h1_font .':900italic',
+	$h2_font .':100', $h2_font .':100italic', $h2_font .':200', $h2_font .':200italic', $h2_font .':300', $h2_font .':300italic', $h2_font .':400', $h2_font .':400italic', $h2_font .':500', $h2_font .':500italic', $h2_font .':600', $h2_font .':600italic', $h2_font .':700', $h2_font .':700italic', $h2_font .':800', $h2_font .':800italic', $h2_font .':900', $h2_font .':900italic',
+	$h3_font .':100', $h3_font .':100italic', $h3_font .':200', $h3_font .':200italic', $h3_font .':300', $h3_font .':300italic', $h3_font .':400', $h3_font .':400italic', $h3_font .':500', $h3_font .':500italic', $h3_font .':600', $h3_font .':600italic', $h3_font .':700', $h3_font .':700italic', $h3_font .':800', $h3_font .':800italic', $h3_font .':900', $h3_font .':900italic',
+	$h4_font .':100', $h4_font .':100italic', $h4_font .':200', $h4_font .':200italic', $h4_font .':300', $h4_font .':300italic', $h4_font .':400', $h4_font .':400italic', $h4_font .':500', $h4_font .':500italic', $h4_font .':600', $h4_font .':600italic', $h4_font .':700', $h4_font .':700italic', $h4_font .':800', $h4_font .':800italic', $h4_font .':900', $h4_font .':900italic',
+	$h5_font .':100', $h5_font .':100italic', $h5_font .':200', $h5_font .':200italic', $h5_font .':300', $h5_font .':300italic', $h5_font .':400', $h5_font .':400italic', $h5_font .':500', $h5_font .':500italic', $h5_font .':600', $h5_font .':600italic', $h5_font .':700', $h5_font .':700italic', $h5_font .':800', $h5_font .':800italic', $h5_font .':900', $h5_font .':900italic',
+	$h6_font .':100', $h6_font .':100italic', $h6_font .':200', $h6_font .':200italic', $h6_font .':300', $h6_font .':300italic', $h6_font .':400', $h6_font .':400italic', $h6_font .':500', $h6_font .':500italic', $h6_font .':600', $h6_font .':600italic', $h6_font .':700', $h6_font .':700italic', $h6_font .':800', $h6_font .':800italic', $h6_font .':900', $h6_font .':900italic',
+	 );
+    $query_args = array(
+        'family'  => urlencode( implode( '|', $font_families ) ),
+        'subset'  => urlencode( 'latin,latin-ext' ),
+        'display' => urlencode( 'swap' ),
+    );
+    return apply_filters( 'arilewp_get_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
+}
