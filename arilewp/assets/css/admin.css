@@ -151,3 +151,8 @@ li#accordion-section-upgrade_premium .accordion-section-title:hover {
 	background-color: #FFFFFF;
 }
 .notice-success .notice-text{ font-size : 17px;}
+.notice-text .offer { 
+	font-size : 24px;
+	color : #e43636;
+	font-weight: 700;
+}

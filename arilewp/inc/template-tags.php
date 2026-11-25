@@ -481,7 +481,7 @@ function display_upgrade_pro_admin_notice() {
 					),
 					'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
 					'<strong>' . esc_html( $theme_info->Name ). '</strong>',
-					'<strong>Unlock premium features with 35% OFF</strong>',
+					'<strong>Unlock premium features with <span class="offer">Limited Time Offer - FLAT 50% OFF</span></strong>',
 					'<strong>Pro version</strong>',
 				);
 				?>
